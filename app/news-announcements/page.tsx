@@ -20,7 +20,7 @@ const NewsAnnouncementsPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-amber-50">
+    <div className="min-h-screen bg-white text-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-12">
           News & Announcements
@@ -31,13 +31,13 @@ const NewsAnnouncementsPage = () => {
             <Link
               key={news.id}
               href={`/news-announcements/${news.slug}`}
-              className="block bg-amber-50/5 border border-amber-50/10 rounded-lg p-6 hover:bg-amber-50/10 hover:border-[#800020] transition-all duration-300 group"
+              className="block bg-gray-50 border border-gray-200 rounded-lg p-6 hover:bg-gray-100 hover:border-blue-600 transition-all duration-300 group"
             >
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                <h2 className="text-lg md:text-xl text-amber-50 group-hover:text-[#800020] transition-colors duration-300 flex-1">
+                <h2 className="text-lg md:text-xl text-black group-hover:text-blue-600 transition-colors duration-300 flex-1">
                   {news.title}
                 </h2>
-                <span className="text-sm text-amber-50/60 whitespace-nowrap">
+                <span className="text-sm text-gray-500 whitespace-nowrap">
                   {news.date}
                 </span>
               </div>
@@ -51,7 +51,7 @@ const NewsAnnouncementsPage = () => {
             {currentPage > 1 && (
               <button
                 onClick={() => goToPage(currentPage - 1)}
-                className="px-4 py-2 bg-amber-50/5 border border-amber-50/10 text-amber-50 rounded hover:bg-[#800020] hover:border-[#800020] transition-all"
+                className="px-4 py-2 bg-gray-50 border border-gray-200 text-black rounded hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all"
               >
                 Previous
               </button>
@@ -69,19 +69,16 @@ const NewsAnnouncementsPage = () => {
                     onClick={() => goToPage(page)}
                     className={`px-4 py-2 rounded transition-all ${
                       currentPage === page
-                        ? "bg-[#800020] text-amber-50 border border-[#800020]"
-                        : "bg-amber-50/5 border border-amber-50/10 text-amber-50 hover:bg-[#800020] hover:border-[#800020]"
+                        ? "bg-blue-600 text-white border border-blue-600"
+                        : "bg-gray-50 border border-gray-200 text-black hover:bg-blue-600 hover:border-blue-600 hover:text-white"
                     }`}
                   >
                     {page}
                   </button>
                 );
-              } else if (
-                page === currentPage - 2 ||
-                page === currentPage + 2
-              ) {
+              } else if (page === currentPage - 2 || page === currentPage + 2) {
                 return (
-                  <span key={page} className="text-amber-50/60">
+                  <span key={page} className="text-gray-500">
                     ...
                   </span>
                 );
@@ -92,7 +89,7 @@ const NewsAnnouncementsPage = () => {
             {currentPage < totalPages && (
               <button
                 onClick={() => goToPage(currentPage + 1)}
-                className="px-4 py-2 bg-amber-50/5 border border-amber-50/10 text-amber-50 rounded hover:bg-[#800020] hover:border-[#800020] transition-all"
+                className="px-4 py-2 bg-gray-50 border border-gray-200 text-black rounded hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all"
               >
                 Next
               </button>

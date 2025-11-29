@@ -1,19 +1,19 @@
 const ExpertScientificEditingServicePage = () => {
   return (
-    <div className="min-h-screen bg-black text-amber-50">
+    <div className="min-h-screen bg-white text-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-amber-50">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-black">
             Expert Scientific Editing Service
           </h1>
-          <div className="h-1 w-32 bg-[#800020] rounded"></div>
+          <div className="h-1 w-32 bg-blue-600 rounded"></div>
         </div>
 
         {/* Introduction */}
         <section className="mb-16">
-          <div className="bg-amber-50/5 border border-amber-50/10 rounded-lg p-6 md:p-8">
-            <p className="text-amber-50/80 leading-relaxed mb-6">
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 md:p-8">
+            <p className="text-gray-700 leading-relaxed mb-6">
               Crinfo Global offers premium scientific editing services designed
               for authors tackling complex academic work, particularly those
               dealing with intricate or abstract subjects. Our expert service
@@ -23,8 +23,8 @@ const ExpertScientificEditingServicePage = () => {
               editorial support prior to submission, especially when targeting
               high-impact journals.
             </p>
-            <div className="bg-[#800020]/10 border-l-4 border-[#800020] p-4 rounded">
-              <p className="text-amber-50/90 font-medium">
+            <div className="bg-blue-600/10 border-l-4 border-blue-600 p-4 rounded">
+              <p className="text-gray-800 font-medium">
                 Perfect for authors with less writing experience or those
                 addressing highly complex research topics, aiming for submission
                 to higher-impact journals.
@@ -35,7 +35,7 @@ const ExpertScientificEditingServicePage = () => {
 
         {/* Key Features */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-amber-50">
+          <h2 className="text-3xl font-bold mb-6 text-black">
             Comprehensive Features
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
@@ -54,10 +54,10 @@ const ExpertScientificEditingServicePage = () => {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="flex items-start gap-3 bg-amber-50/5 border border-amber-50/10 rounded-lg p-4 hover:bg-amber-50/10 transition-colors duration-300"
+                className="flex items-start gap-3 bg-gray-50 border border-gray-200 rounded-lg p-4 hover:bg-gray-100 transition-colors duration-300"
               >
                 <svg
-                  className="w-6 h-6 text-[#800020] shrink-0 mt-0.5"
+                  className="w-6 h-6 text-blue-600 shrink-0 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -69,7 +69,7 @@ const ExpertScientificEditingServicePage = () => {
                     d="M5 13l4 4L19 7"
                   />
                 </svg>
-                <span className="text-amber-50/80">{feature}</span>
+                <span className="text-gray-700">{feature}</span>
               </div>
             ))}
           </div>
@@ -77,10 +77,10 @@ const ExpertScientificEditingServicePage = () => {
 
         {/* What's Specific */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-amber-50">
+          <h2 className="text-3xl font-bold mb-6 text-black">
             What Makes Expert Scientific Editing Special?
           </h2>
-          <div className="bg-[#800020]/10 border border-[#800020] rounded-lg p-6 md:p-8">
+          <div className="bg-blue-600/10 border border-blue-600 rounded-lg p-6 md:p-8">
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 "Help modify paper according to review comments",
@@ -91,7 +91,7 @@ const ExpertScientificEditingServicePage = () => {
               ].map((feature, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <svg
-                    className="w-6 h-6 text-[#800020] shrink-0 mt-0.5"
+                    className="w-6 h-6 text-blue-600 shrink-0 mt-0.5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -103,7 +103,7 @@ const ExpertScientificEditingServicePage = () => {
                       d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
-                  <span className="text-amber-50/90 font-medium">{feature}</span>
+                  <span className="text-gray-800 font-medium">{feature}</span>
                 </div>
               ))}
             </div>
@@ -112,19 +112,19 @@ const ExpertScientificEditingServicePage = () => {
 
         {/* Service Differences */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-amber-50">
+          <h2 className="text-3xl font-bold mb-6 text-black">
             Understanding the Difference
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {/* Standard Editing */}
-            <div className="bg-amber-50/5 border border-amber-50/10 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-amber-50 mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 bg-amber-50 rounded-full"></span>
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-black mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 bg-gray-600 rounded-full"></span>
                 Standard Editing
               </h3>
-              <p className="text-amber-50/70 leading-relaxed">
-                Suitable for authors with considerable writing experience who can
-                produce an initial draft in English but require language and
+              <p className="text-gray-600 leading-relaxed">
+                Suitable for authors with considerable writing experience who
+                can produce an initial draft in English but require language and
                 grammar refinement. We ensure papers have no spelling, grammar,
                 tense, punctuation errors, or inaccuracies in scientific
                 terminology, meeting language requirements for international
@@ -133,12 +133,12 @@ const ExpertScientificEditingServicePage = () => {
             </div>
 
             {/* Expert Scientific Editing */}
-            <div className="bg-[#800020]/10 border border-[#800020] rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-amber-50 mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 bg-[#800020] rounded-full"></span>
+            <div className="bg-blue-600/10 border border-blue-600 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-black mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
                 Expert Scientific Editing
               </h3>
-              <p className="text-amber-50/70 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 Designed for authors with less writing experience or complex
                 research topics targeting higher-impact journals. Includes
                 in-depth proofreading, article structuring from reviewers'
@@ -153,20 +153,20 @@ const ExpertScientificEditingServicePage = () => {
 
         {/* Comparison Table */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-amber-50">
+          <h2 className="text-3xl font-bold mb-6 text-black">
             Detailed Service Comparison
           </h2>
           <div className="overflow-x-auto">
-            <table className="w-full border-collapse bg-amber-50/5 border border-amber-50/10 rounded-lg overflow-hidden">
+            <table className="w-full border-collapse bg-gray-50 border border-gray-200 rounded-lg overflow-hidden">
               <thead>
-                <tr className="bg-[#800020]/20 border-b border-amber-50/10">
-                  <th className="text-left p-4 text-amber-50 font-semibold">
+                <tr className="bg-blue-600/10 border-b border-gray-200">
+                  <th className="text-left p-4 text-black font-semibold">
                     Features
                   </th>
-                  <th className="text-center p-4 text-amber-50 font-semibold">
+                  <th className="text-center p-4 text-black font-semibold">
                     Standard
                   </th>
-                  <th className="text-center p-4 text-amber-50 font-semibold">
+                  <th className="text-center p-4 text-black font-semibold">
                     Expert Scientific
                   </th>
                 </tr>
@@ -276,13 +276,13 @@ const ExpertScientificEditingServicePage = () => {
                 ].map((row, index) => (
                   <tr
                     key={index}
-                    className="border-b border-amber-50/10 hover:bg-amber-50/5 transition-colors"
+                    className="border-b border-gray-200 hover:bg-gray-100 transition-colors"
                   >
-                    <td className="p-4 text-amber-50/80">{row.name}</td>
+                    <td className="p-4 text-gray-700">{row.name}</td>
                     <td className="p-4 text-center">
                       {row.standard ? (
                         <svg
-                          className="w-6 h-6 text-[#800020] mx-auto"
+                          className="w-6 h-6 text-blue-600 mx-auto"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -295,13 +295,13 @@ const ExpertScientificEditingServicePage = () => {
                           />
                         </svg>
                       ) : (
-                        <span className="text-amber-50/30">—</span>
+                        <span className="text-gray-400">—</span>
                       )}
                     </td>
                     <td className="p-4 text-center">
                       {row.expert ? (
                         <svg
-                          className="w-6 h-6 text-[#800020] mx-auto"
+                          className="w-6 h-6 text-blue-600 mx-auto"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -314,7 +314,7 @@ const ExpertScientificEditingServicePage = () => {
                           />
                         </svg>
                       ) : (
-                        <span className="text-amber-50/30">—</span>
+                        <span className="text-gray-400">—</span>
                       )}
                     </td>
                   </tr>
@@ -326,10 +326,10 @@ const ExpertScientificEditingServicePage = () => {
 
         {/* Pricing */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-amber-50">
+          <h2 className="text-3xl font-bold mb-6 text-black">
             Pricing Structure
           </h2>
-          <div className="bg-amber-50/5 border border-amber-50/10 rounded-lg p-6 md:p-8">
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 md:p-8">
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               {[
                 { range: "0-2,000 words", price: "$299" },
@@ -339,18 +339,16 @@ const ExpertScientificEditingServicePage = () => {
               ].map((tier, index) => (
                 <div
                   key={index}
-                  className="bg-black border border-[#800020] rounded-lg p-6 hover:border-[#800020]/50 transition-colors duration-300"
+                  className="bg-white border border-gray-300 rounded-lg p-6 hover:border-blue-600 transition-colors duration-300"
                 >
-                  <div className="text-amber-50/70 text-sm mb-2">
-                    {tier.range}
-                  </div>
-                  <div className="text-3xl font-bold text-[#800020]">
+                  <div className="text-gray-600 text-sm mb-2">{tier.range}</div>
+                  <div className="text-3xl font-bold text-blue-600">
                     {tier.price}
                   </div>
                 </div>
               ))}
             </div>
-            <p className="text-amber-50/60 text-sm">
+            <p className="text-gray-500 text-sm">
               * Standard turnaround time: 5-7 business days
             </p>
           </div>
@@ -358,7 +356,7 @@ const ExpertScientificEditingServicePage = () => {
 
         {/* Service Process */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-amber-50">
+          <h2 className="text-3xl font-bold mb-6 text-black">
             Service Process
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -390,15 +388,15 @@ const ExpertScientificEditingServicePage = () => {
             ].map((process, index) => (
               <div
                 key={index}
-                className="bg-amber-50/5 border border-amber-50/10 rounded-lg p-6 hover:bg-amber-50/10 transition-colors duration-300"
+                className="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300"
               >
-                <div className="w-12 h-12 bg-[#800020] rounded-full flex items-center justify-center text-amber-50 font-bold text-xl mb-4">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
                   {process.step}
                 </div>
-                <h3 className="text-xl font-semibold text-amber-50 mb-3">
+                <h3 className="text-xl font-semibold text-black mb-3">
                   {process.title}
                 </h3>
-                <p className="text-amber-50/70 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed">
                   {process.description}
                 </p>
               </div>
@@ -408,11 +406,11 @@ const ExpertScientificEditingServicePage = () => {
 
         {/* Contact */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-amber-50">Contact Us</h2>
-          <div className="bg-[#800020]/10 border border-[#800020] rounded-lg p-6 md:p-8">
+          <h2 className="text-3xl font-bold mb-6 text-black">Contact Us</h2>
+          <div className="bg-blue-600/10 border border-blue-600 rounded-lg p-6 md:p-8">
             <div className="flex items-center gap-3">
               <svg
-                className="w-6 h-6 text-[#800020]"
+                className="w-6 h-6 text-blue-600"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -426,7 +424,7 @@ const ExpertScientificEditingServicePage = () => {
               </svg>
               <a
                 href="mailto:authorservices@crinfoglobal.com"
-                className="text-xl text-amber-50 hover:text-[#800020] transition-colors duration-300"
+                className="text-xl text-black hover:text-blue-600 transition-colors duration-300"
               >
                 authorservices@crinfoglobal.com
               </a>
@@ -436,7 +434,7 @@ const ExpertScientificEditingServicePage = () => {
 
         {/* FAQs */}
         <section>
-          <h2 className="text-3xl font-bold mb-6 text-amber-50">
+          <h2 className="text-3xl font-bold mb-6 text-black">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
@@ -447,7 +445,8 @@ const ExpertScientificEditingServicePage = () => {
                   "We accept Microsoft Word documents (.doc or .docx format).",
               },
               {
-                question: "Whom should I contact if I have questions or feedback?",
+                question:
+                  "Whom should I contact if I have questions or feedback?",
                 answer:
                   "If you have any questions or feedback, please reach out to our dedicated editorial team at Crinfo Global. Our team thoroughly reviews every edited manuscript to ensure the highest quality. Contact us via email, and we will promptly respond within 1 business day.",
               },
@@ -465,12 +464,12 @@ const ExpertScientificEditingServicePage = () => {
             ].map((faq, index) => (
               <div
                 key={index}
-                className="bg-amber-50/5 border border-amber-50/10 rounded-lg p-6 hover:bg-amber-50/10 transition-colors duration-300"
+                className="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300"
               >
-                <h3 className="text-lg font-semibold text-amber-50 mb-3">
+                <h3 className="text-lg font-semibold text-black mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-amber-50/70 leading-relaxed">{faq.answer}</p>
+                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>

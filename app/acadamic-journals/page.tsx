@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const AcademicJournalsPage = () => {
   return (
-    <div className="min-h-screen bg-black text-amber-50">
+    <div className="min-h-screen bg-white text-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-12">Journals</h1>
 
@@ -12,13 +12,13 @@ const AcademicJournalsPage = () => {
           {JournalsConstants.map((journal) => (
             <div
               key={journal.id}
-              className="bg-black border-l-4 border-[#800020] rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-[#800020]/20 transition-all duration-300 group"
+              className="bg-white border-l-4 border-blue-600 rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-blue-600/20 transition-all duration-300 group"
             >
-              <div className="bg-amber-50/5 border border-amber-50/10 rounded-lg p-6 md:p-8">
+              <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 md:p-8">
                 <div className="flex flex-col md:flex-row gap-6">
                   {/* Journal Image */}
                   <div className="shrink-0">
-                    <div className="w-full md:w-48 h-64 bg-gradient-to-br from-[#800020]/20 to-amber-50/10 rounded-lg flex items-center justify-center border border-amber-50/20">
+                    <div className="w-full md:w-48 h-64 bg-gradient-to-br from-blue-600/20 to-gray-100 rounded-lg flex items-center justify-center border border-gray-300">
                       <Image
                         src={journal.image}
                         alt={journal.title}
@@ -33,14 +33,14 @@ const AcademicJournalsPage = () => {
                   <div className="flex-1 space-y-4">
                     {/* Title and Link */}
                     <div className="flex items-start justify-between gap-4">
-                      <h2 className="text-2xl md:text-3xl font-bold text-amber-50 group-hover:text-[#800020] transition-colors duration-300">
+                      <h2 className="text-2xl md:text-3xl font-bold text-black group-hover:text-blue-600 transition-colors duration-300">
                         {journal.title}
                       </h2>
                       <Link
                         href={journal.doi}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="shrink-0 text-amber-50 hover:text-[#800020] transition-colors duration-300"
+                        className="shrink-0 text-black hover:text-blue-600 transition-colors duration-300"
                       >
                         <svg
                           className="w-5 h-5"
@@ -60,27 +60,27 @@ const AcademicJournalsPage = () => {
 
                     {/* Metadata */}
                     <div className="flex flex-wrap items-center gap-4 text-sm">
-                      <span className="text-amber-50/80">{journal.issn}</span>
-                      <span className="text-amber-50/60">•</span>
-                      <span className="text-amber-50/80">
+                      <span className="text-gray-600">{journal.issn}</span>
+                      <span className="text-gray-400">•</span>
+                      <span className="text-gray-600">
                         {journal.issuesPerYear}
                       </span>
-                      <span className="text-amber-50/60">•</span>
+                      <span className="text-gray-400">•</span>
                       <Link
                         href={journal.doi}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-amber-50/80 hover:text-[#800020] transition-colors duration-300 hover:underline"
+                        className="text-gray-600 hover:text-blue-600 transition-colors duration-300 hover:underline"
                       >
                         {journal.doi}
                       </Link>
-                      <span className="px-3 py-1 bg-[#800020] text-amber-50 text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
                         {journal.indexing}
                       </span>
                     </div>
 
                     {/* Description */}
-                    <p className="text-amber-50/70 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed">
                       {journal.description}
                     </p>
 
@@ -90,7 +90,7 @@ const AcademicJournalsPage = () => {
                         href={journal.doi}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-[#800020] text-amber-50 font-medium rounded-md hover:bg-[#600018] transition-all duration-300 group/btn"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-all duration-300 group/btn"
                       >
                         <span>Visit Journal</span>
                         <svg

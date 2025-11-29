@@ -1,94 +1,89 @@
 import Carousel from "@/components/ui/Carousel";
-import BooksConstants from "@/constants/BooksConstants";
 import NewsConstants from "@/constants/NewsConstants";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Calendar } from "lucide-react";
 
 const HomePage = () => {
-  // Get latest 3 books and news
-  const latestBooks = BooksConstants.slice(0, 3);
+  // Get latest 4 news
   const latestNews = NewsConstants.slice(0, 4);
 
   return (
-    <div className="min-h-screen flex flex-col items-center bg-black">
+    <div className="min-h-screen flex flex-col items-center bg-white">
       <Carousel />
 
-      {/* Latest Books Section */}
-      <section className="w-full bg-black py-16">
+      {/* Indexing Section */}
+      <section className="w-full bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center mb-8">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-amber-50 mb-2">
-                Featured Books
-              </h2>
-              <p className="text-amber-50/60">
-                Explore our latest academic publications
-              </p>
-            </div>
-            <Link
-              href="/books"
-              className="flex items-center gap-2 text-amber-50 hover:text-[#800020] transition-colors group"
-            >
-              <span className="font-semibold">View All</span>
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </Link>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+              Indexing & Archiving
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Our journals are indexed in leading academic databases and
+              archived for long-term preservation
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {latestBooks.map((book) => (
-              <Link
-                key={book.id}
-                href={`/books/${book.id}`}
-                className="bg-amber-50/5 border border-amber-50/10 rounded-lg overflow-hidden hover:border-[#800020] hover:shadow-lg hover:shadow-[#800020]/20 transition-all duration-300 group"
-              >
-                <div className="relative w-full aspect-[3/4] bg-gradient-to-br from-[#800020]/20 to-amber-50/10">
-                  <Image
-                    src={book.image}
-                    alt={book.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {book.categories.slice(0, 2).map((category, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-1 bg-[#800020] text-amber-50 text-xs font-semibold rounded uppercase"
-                      >
-                        {category}
-                      </span>
-                    ))}
-                  </div>
-                  <h3 className="text-xl font-bold text-amber-50 group-hover:text-[#800020] transition-colors line-clamp-2 mb-2">
-                    {book.title}
-                  </h3>
-                  <p className="text-sm text-amber-50/60 line-clamp-1">
-                    {book.authors.join(", ")}
-                  </p>
-                </div>
-              </Link>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 text-center hover:border-blue-600 transition-colors duration-300">
+              <div className="w-32 h-16 mx-auto mb-6 flex items-center justify-center">
+                <Image
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/320px-Google_Scholar_logo.svg.png"
+                  alt="Google Scholar"
+                  width={128}
+                  height={64}
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-black mb-3">
+                Google Scholar
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                All our journals are indexed in Google Scholar, ensuring maximum
+                visibility and discoverability of your research across the
+                academic community worldwide.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 text-center hover:border-blue-600 transition-colors duration-300">
+              <div className="w-32 h-16 mx-auto mb-6 flex items-center justify-center">
+                <Image
+                  src="https://crossref.org/images/crossref-logo-100.png"
+                  alt="Crossref"
+                  width={128}
+                  height={64}
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-black mb-3">
+                Crossref
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Our articles are registered with Crossref, providing permanent
+                DOIs and enabling proper citation tracking and linking between
+                scholarly publications.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Latest News & Announcements Section */}
-      <section className="w-full bg-black py-16 border-t border-amber-50/10">
+      <section className="w-full bg-white py-16 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mb-8">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-amber-50 mb-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-black mb-2">
                 Latest News & Announcements
               </h2>
-              <p className="text-amber-50/60">
+              <p className="text-gray-600">
                 Stay updated with our recent activities
               </p>
             </div>
             <Link
               href="/news-announcements"
-              className="flex items-center gap-2 text-amber-50 hover:text-[#800020] transition-colors group"
+              className="flex items-center gap-2 text-black hover:text-blue-600 transition-colors group"
             >
               <span className="font-semibold">View All</span>
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -100,18 +95,16 @@ const HomePage = () => {
               <Link
                 key={news.id}
                 href={`/news-announcements/${news.slug}`}
-                className="bg-amber-50/5 border border-amber-50/10 rounded-lg p-6 hover:bg-amber-50/10 hover:border-[#800020] transition-all duration-300 group"
+                className="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:bg-gray-100 hover:border-blue-600 transition-all duration-300 group"
               >
                 <div className="flex items-start gap-3 mb-3">
-                  <Calendar className="w-5 h-5 text-[#800020] flex-shrink-0 mt-1" />
-                  <span className="text-sm text-amber-50/60">{news.date}</span>
+                  <Calendar className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                  <span className="text-sm text-gray-600">{news.date}</span>
                 </div>
-                <h3 className="text-xl font-bold text-amber-50 group-hover:text-[#800020] transition-colors line-clamp-2 mb-3">
+                <h3 className="text-xl font-bold text-black group-hover:text-blue-600 transition-colors line-clamp-2 mb-3">
                   {news.title}
                 </h3>
-                <p className="text-amber-50/70 line-clamp-2">
-                  {news.excerpt}
-                </p>
+                <p className="text-gray-700 line-clamp-2">{news.excerpt}</p>
               </Link>
             ))}
           </div>

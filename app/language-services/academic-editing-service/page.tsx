@@ -1,19 +1,19 @@
 const AcademicTranslationServicePage = () => {
   return (
-    <div className="min-h-screen bg-black text-amber-50">
+    <div className="min-h-screen bg-white text-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-amber-50">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-black">
             Academic Translation Service
           </h1>
-          <div className="h-1 w-32 bg-[#800020] rounded"></div>
+          <div className="h-1 w-32 bg-blue-600 rounded"></div>
         </div>
 
         {/* Introduction */}
         <section className="mb-16">
-          <div className="bg-amber-50/5 border border-amber-50/10 rounded-lg p-6 md:p-8">
-            <p className="text-amber-50/80 leading-relaxed mb-6">
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 md:p-8">
+            <p className="text-gray-700 leading-relaxed mb-6">
               Crinfo Global offers professional translation services for authors
               who need to translate their Chinese manuscripts into authentic
               English. Simply provide your Chinese manuscript, and we will match
@@ -21,13 +21,14 @@ const AcademicTranslationServicePage = () => {
               experience in related fields. Our experts will translate your
               content into fluent English, ensuring precision and authenticity.
               Our dedicated quality control editors meticulously review the
-              translated manuscripts, focusing on eliminating grammatical errors,
-              spelling mistakes, tense issues, and any morphological
-              inconsistencies, ensuring the final English version is flawless and
-              meets the requirements for publication in international journals.
+              translated manuscripts, focusing on eliminating grammatical
+              errors, spelling mistakes, tense issues, and any morphological
+              inconsistencies, ensuring the final English version is flawless
+              and meets the requirements for publication in international
+              journals.
             </p>
-            <div className="bg-[#800020]/10 border-l-4 border-[#800020] p-4 rounded">
-              <p className="text-amber-50/90 font-medium">
+            <div className="bg-blue-600/10 border-l-4 border-blue-600 p-4 rounded">
+              <p className="text-gray-800 font-medium">
                 Perfect for authors with complete Chinese academic articles who
                 need professional translation into authentic English for
                 international publication.
@@ -38,7 +39,7 @@ const AcademicTranslationServicePage = () => {
 
         {/* Key Features */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-amber-50">
+          <h2 className="text-3xl font-bold mb-6 text-black">
             Why Choose Our Translation Service?
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -60,8 +61,7 @@ const AcademicTranslationServicePage = () => {
               },
               {
                 title: "Timely Delivery",
-                description:
-                  "Reliable turnaround time of 9-10 business days",
+                description: "Reliable turnaround time of 9-10 business days",
               },
               {
                 title: "Confidentiality and Trust",
@@ -76,15 +76,15 @@ const AcademicTranslationServicePage = () => {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="bg-amber-50/5 border border-amber-50/10 rounded-lg p-6 hover:bg-amber-50/10 transition-colors duration-300"
+                className="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300"
               >
-                <div className="w-12 h-12 bg-[#800020] rounded-full flex items-center justify-center text-amber-50 font-bold text-lg mb-4">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mb-4">
                   {index + 1}
                 </div>
-                <h3 className="text-lg font-semibold text-amber-50 mb-2">
+                <h3 className="text-lg font-semibold text-black mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-amber-50/70 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -94,11 +94,11 @@ const AcademicTranslationServicePage = () => {
 
         {/* What We Ensure */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-amber-50">
+          <h2 className="text-3xl font-bold mb-6 text-black">
             Quality Assurance
           </h2>
-          <div className="bg-[#800020]/10 border border-[#800020] rounded-lg p-6 md:p-8">
-            <p className="text-amber-50/80 leading-relaxed mb-6">
+          <div className="bg-blue-600/10 border border-blue-600 rounded-lg p-6 md:p-8">
+            <p className="text-gray-700 leading-relaxed mb-6">
               Our quality control process ensures your translated manuscript is
               publication-ready:
             </p>
@@ -113,7 +113,7 @@ const AcademicTranslationServicePage = () => {
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <svg
-                    className="w-6 h-6 text-[#800020] shrink-0 mt-0.5"
+                    className="w-6 h-6 text-blue-600 shrink-0 mt-0.5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -125,7 +125,7 @@ const AcademicTranslationServicePage = () => {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="text-amber-50/90">{item}</span>
+                  <span className="text-gray-800">{item}</span>
                 </div>
               ))}
             </div>
@@ -134,10 +134,10 @@ const AcademicTranslationServicePage = () => {
 
         {/* Pricing */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-amber-50">
+          <h2 className="text-3xl font-bold mb-6 text-black">
             Pricing Structure
           </h2>
-          <div className="bg-amber-50/5 border border-amber-50/10 rounded-lg p-6 md:p-8">
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 md:p-8">
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               {[
                 { range: "0-2,000 words", price: "$203" },
@@ -147,18 +147,16 @@ const AcademicTranslationServicePage = () => {
               ].map((tier, index) => (
                 <div
                   key={index}
-                  className="bg-black border border-amber-50/20 rounded-lg p-6 hover:border-[#800020] transition-colors duration-300"
+                  className="bg-white border border-gray-300 rounded-lg p-6 hover:border-blue-600 transition-colors duration-300"
                 >
-                  <div className="text-amber-50/70 text-sm mb-2">
-                    {tier.range}
-                  </div>
-                  <div className="text-3xl font-bold text-[#800020]">
+                  <div className="text-gray-600 text-sm mb-2">{tier.range}</div>
+                  <div className="text-3xl font-bold text-blue-600">
                     {tier.price}
                   </div>
                 </div>
               ))}
             </div>
-            <p className="text-amber-50/60 text-sm">
+            <p className="text-gray-500 text-sm">
               * Standard turnaround time: 9-10 business days
             </p>
           </div>
@@ -166,7 +164,7 @@ const AcademicTranslationServicePage = () => {
 
         {/* Service Process */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-amber-50">
+          <h2 className="text-3xl font-bold mb-6 text-black">
             Service Process
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -198,15 +196,15 @@ const AcademicTranslationServicePage = () => {
             ].map((process, index) => (
               <div
                 key={index}
-                className="bg-amber-50/5 border border-amber-50/10 rounded-lg p-6 hover:bg-amber-50/10 transition-colors duration-300"
+                className="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300"
               >
-                <div className="w-12 h-12 bg-[#800020] rounded-full flex items-center justify-center text-amber-50 font-bold text-xl mb-4">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
                   {process.step}
                 </div>
-                <h3 className="text-xl font-semibold text-amber-50 mb-3">
+                <h3 className="text-xl font-semibold text-black mb-3">
                   {process.title}
                 </h3>
-                <p className="text-amber-50/70 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed">
                   {process.description}
                 </p>
               </div>
@@ -216,10 +214,10 @@ const AcademicTranslationServicePage = () => {
 
         {/* Translation Workflow */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-amber-50">
+          <h2 className="text-3xl font-bold mb-6 text-black">
             Our Translation Workflow
           </h2>
-          <div className="bg-amber-50/5 border border-amber-50/10 rounded-lg p-6 md:p-8">
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 md:p-8">
             <div className="space-y-6">
               {[
                 {
@@ -245,16 +243,16 @@ const AcademicTranslationServicePage = () => {
               ].map((workflow, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-4 pb-6 border-b border-amber-50/10 last:border-0 last:pb-0"
+                  className="flex items-start gap-4 pb-6 border-b border-gray-200 last:border-0 last:pb-0"
                 >
-                  <div className="shrink-0 w-8 h-8 bg-[#800020] rounded-full flex items-center justify-center text-amber-50 font-bold text-sm">
+                  <div className="shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
                     {index + 1}
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-amber-50 mb-2">
+                    <h4 className="text-lg font-semibold text-black mb-2">
                       {workflow.phase}
                     </h4>
-                    <p className="text-amber-50/70 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed">
                       {workflow.description}
                     </p>
                   </div>
@@ -266,11 +264,11 @@ const AcademicTranslationServicePage = () => {
 
         {/* Contact */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-amber-50">Contact Us</h2>
-          <div className="bg-[#800020]/10 border border-[#800020] rounded-lg p-6 md:p-8">
+          <h2 className="text-3xl font-bold mb-6 text-black">Contact Us</h2>
+          <div className="bg-blue-600/10 border border-blue-600 rounded-lg p-6 md:p-8">
             <div className="flex items-center gap-3">
               <svg
-                className="w-6 h-6 text-[#800020]"
+                className="w-6 h-6 text-blue-600"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -284,7 +282,7 @@ const AcademicTranslationServicePage = () => {
               </svg>
               <a
                 href="mailto:authorservices@crinfoglobal.com"
-                className="text-xl text-amber-50 hover:text-[#800020] transition-colors duration-300"
+                className="text-xl text-black hover:text-blue-600 transition-colors duration-300"
               >
                 authorservices@crinfoglobal.com
               </a>
@@ -294,7 +292,7 @@ const AcademicTranslationServicePage = () => {
 
         {/* FAQs */}
         <section>
-          <h2 className="text-3xl font-bold mb-6 text-amber-50">
+          <h2 className="text-3xl font-bold mb-6 text-black">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
@@ -305,7 +303,8 @@ const AcademicTranslationServicePage = () => {
                   "We accept Microsoft Word documents (.doc or .docx format) for both Chinese manuscripts and final delivery.",
               },
               {
-                question: "Whom should I contact if I have questions or feedback?",
+                question:
+                  "Whom should I contact if I have questions or feedback?",
                 answer:
                   "If you have any questions or feedback, please reach out to our dedicated editorial team at Crinfo Global. Our team thoroughly reviews every translated manuscript to ensure the highest quality. Contact us via email, and we will promptly respond within 1 business day.",
               },
@@ -328,12 +327,12 @@ const AcademicTranslationServicePage = () => {
             ].map((faq, index) => (
               <div
                 key={index}
-                className="bg-amber-50/5 border border-amber-50/10 rounded-lg p-6 hover:bg-amber-50/10 transition-colors duration-300"
+                className="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300"
               >
-                <h3 className="text-lg font-semibold text-amber-50 mb-3">
+                <h3 className="text-lg font-semibold text-black mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-amber-50/70 leading-relaxed">{faq.answer}</p>
+                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>

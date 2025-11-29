@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const BooksPage = () => {
   return (
-    <div className="min-h-screen bg-black text-amber-50">
+    <div className="min-h-screen bg-white text-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-12">Books</h1>
 
@@ -13,13 +13,13 @@ const BooksPage = () => {
             <Link
               key={book.id}
               href={`/books/${book.id}`}
-              className="block bg-black border-l-4 border-[#800020] rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-[#800020]/20 transition-all duration-300 group"
+              className="block bg-white border-l-4 border-blue-600 rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-blue-600/20 transition-all duration-300 group"
             >
-              <div className="bg-amber-50/5 border border-amber-50/10 rounded-lg p-6 md:p-8">
+              <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 md:p-8">
                 <div className="flex flex-col md:flex-row gap-6">
                   {/* Book Cover Image */}
                   <div className="shrink-0">
-                    <div className="w-full md:w-48 h-64 bg-linear-to-br from-[#800020]/20 to-amber-50/10 rounded-lg flex items-center justify-center border border-amber-50/20 overflow-hidden">
+                    <div className="w-full md:w-48 h-64 bg-gradient-to-br from-blue-600/20 to-gray-100 rounded-lg flex items-center justify-center border border-gray-300 overflow-hidden">
                       <Image
                         src={book.image}
                         alt={book.title}
@@ -36,16 +36,16 @@ const BooksPage = () => {
                     <div className="flex flex-wrap items-center gap-2 text-xs font-medium uppercase tracking-wider">
                       {book.categories.map((category, index) => (
                         <span key={index}>
-                          <span className="text-amber-50/80">{category}</span>
+                          <span className="text-gray-600">{category}</span>
                           {index < book.categories.length - 1 && (
-                            <span className="text-amber-50/60 mx-2">•</span>
+                            <span className="text-gray-400 mx-2">•</span>
                           )}
                         </span>
                       ))}
                     </div>
 
                     {/* Title */}
-                    <h2 className="text-2xl md:text-3xl font-bold text-amber-50 group-hover:text-[#800020] transition-colors duration-300">
+                    <h2 className="text-2xl md:text-3xl font-bold text-black group-hover:text-blue-600 transition-colors duration-300">
                       {book.title}
                     </h2>
 
@@ -53,16 +53,16 @@ const BooksPage = () => {
                     <div className="flex flex-wrap items-center gap-2 text-base">
                       {book.authors.map((author, index) => (
                         <span key={index}>
-                          <span className="text-amber-50/90">{author}</span>
+                          <span className="text-gray-700">{author}</span>
                           {index < book.authors.length - 1 && (
-                            <span className="text-amber-50/60 mx-2">•</span>
+                            <span className="text-gray-400 mx-2">•</span>
                           )}
                         </span>
                       ))}
                     </div>
 
                     {/* Description */}
-                    <p className="text-amber-50/70 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed">
                       {book.description}
                     </p>
                   </div>
