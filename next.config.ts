@@ -15,6 +15,12 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/images/**",
       },
+      {
+        protocol: "https",
+        hostname: "external-content.duckduckgo.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };

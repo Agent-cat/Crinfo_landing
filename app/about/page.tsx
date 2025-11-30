@@ -14,7 +14,7 @@ import {
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white text-black text-justify">
       {/* Hero Section */}
       <section className="relative bg-linear-to-r from-blue-600 to-blue-800 text-white py-20">
         <div className="absolute inset-0 bg-black/5"></div>

@@ -2,6 +2,7 @@
 
 import NavConstants from "@/constants/NavConstants";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -20,14 +21,24 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="max-w-7xl mx-auto pr-4 sm:pl-5 sm:pr-6 lg:pr-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="shrink-0">
             <Link
               href="/"
-              className="text-black text-xl md:text-2xl font-bold hover:text-blue-600 transition-colors duration-300"
+              className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300"
             >
-              Crinfo Global
+              <span className="text-black text-xl md:text-2xl font-bold hover:text-blue-600 transition-colors duration-300">
+                Crinfo Global
+              </span>
+              <Image
+                src="/crinfo_logo.png"
+                alt="Crinfo Global"
+                width={120}
+                height={40}
+                className="h-10 w-auto"
+                priority
+              />
             </Link>
           </div>
 

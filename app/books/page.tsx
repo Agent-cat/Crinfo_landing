@@ -4,9 +4,11 @@ import Link from "next/link";
 
 const BooksPage = () => {
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white text-black text-justify">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl md:text-5xl font-bold mb-12">Books</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-12 text-blue-600">
+          Books
+        </h1>
 
         <div className="space-y-8">
           {BooksConstants.map((book) => (
@@ -15,11 +17,11 @@ const BooksPage = () => {
               href={`/books/${book.id}`}
               className="block bg-white border-l-4 border-blue-600 rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-blue-600/20 transition-all duration-300 group"
             >
-              <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 md:p-8">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 md:p-8">
                 <div className="flex flex-col md:flex-row gap-6">
                   {/* Book Cover Image */}
                   <div className="shrink-0">
-                    <div className="w-full md:w-48 h-64 bg-gradient-to-br from-blue-600/20 to-gray-100 rounded-lg flex items-center justify-center border border-gray-300 overflow-hidden">
+                    <div className="w-full md:w-48 h-64 bg-linear-to-br from-blue-600/20 to-blue-50 rounded-lg flex items-center justify-center border border-blue-200 overflow-hidden">
                       <Image
                         src={book.image}
                         alt={book.title}
@@ -35,11 +37,11 @@ const BooksPage = () => {
                     {/* Categories */}
                     <div className="flex flex-wrap items-center gap-2 text-xs font-medium uppercase tracking-wider">
                       {book.categories.map((category, index) => (
-                        <span key={index}>
-                          <span className="text-gray-600">{category}</span>
-                          {index < book.categories.length - 1 && (
-                            <span className="text-gray-400 mx-2">•</span>
-                          )}
+                        <span
+                          key={index}
+                          className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs"
+                        >
+                          {category}
                         </span>
                       ))}
                     </div>

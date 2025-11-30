@@ -1,4 +1,5 @@
 import Carousel from "@/components/ui/Carousel";
+import ConferenceCard from "@/components/ui/ConferenceCard";
 import NewsConstants from "@/constants/NewsConstants";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,7 +10,7 @@ const HomePage = () => {
   const latestNews = NewsConstants.slice(0, 4);
 
   return (
-    <div className="min-h-screen flex flex-col items-center bg-white">
+    <div className="min-h-screen flex flex-col items-center bg-white text-justify">
       <Carousel />
 
       {/* Indexing Section */}
@@ -49,7 +50,7 @@ const HomePage = () => {
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 text-center hover:border-blue-600 transition-colors duration-300">
               <div className="w-32 h-16 mx-auto mb-6 flex items-center justify-center">
                 <Image
-                  src="https://crossref.org/images/crossref-logo-100.png"
+                  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fipmuonline.com%2Fwp-content%2Fuploads%2F2021%2F04%2Fcrossref.jpg&f=1&nofb=1&ipt=bff95b089ed0e9da805bbc49f817bda609ddaaa868ba5e8424b8dbdd392978e8"
                   alt="Crossref"
                   width={128}
                   height={64}
@@ -65,6 +66,25 @@ const HomePage = () => {
                 scholarly publications.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Conference Section */}
+      <section className="w-full bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+              Featured Conference
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Join our upcoming international conferences and showcase your
+              research
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <ConferenceCard />
           </div>
         </div>
       </section>
