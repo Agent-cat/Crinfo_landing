@@ -34,7 +34,7 @@ const NewsAnnouncementsPage = () => {
               className="block bg-gray-50 border border-gray-200 rounded-lg p-6 hover:bg-gray-100 hover:border-blue-600 transition-all duration-300 group"
             >
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                <h2 className="text-lg md:text-xl text-black group-hover:text-blue-600 transition-colors duration-300 flex-1">
+                <h2 className="text-lg md:text-xl text-black group-hover:text-blue-600 transition-colors duration-300 flex-1 text-justify">
                   {news.title}
                 </h2>
                 <span className="text-sm text-gray-500 whitespace-nowrap">
@@ -67,11 +67,10 @@ const NewsAnnouncementsPage = () => {
                   <button
                     key={page}
                     onClick={() => goToPage(page)}
-                    className={`px-4 py-2 rounded transition-all ${
-                      currentPage === page
+                    className={`px-4 py-2 rounded transition-all ${currentPage === page
                         ? "bg-blue-600 text-white border border-blue-600"
                         : "bg-gray-50 border border-gray-200 text-black hover:bg-blue-600 hover:border-blue-600 hover:text-white"
-                    }`}
+                      }`}
                   >
                     {page}
                   </button>

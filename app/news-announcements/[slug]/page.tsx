@@ -36,25 +36,26 @@ const NewsDetailPage = async ({ params }: PageProps) => {
         </Link>
 
         {/* Article Header */}
-        <article className="bg-gray-50 border border-gray-200 rounded-lg p-8 md:p-12">
+        <article className="bg-gray-50 border border-gray-200 rounded-lg p-8 md:p-12 text-justify">
           <div className="flex items-center gap-2 text-gray-500 mb-4">
             <Calendar className="w-4 h-4" />
             <time className="text-sm">{newsItem.date}</time>
           </div>
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-8 leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-8 leading-tight text-justify">
             {newsItem.title}
           </h1>
 
           {/* Content */}
           <div
-            className="prose prose-gray max-w-none
+            className="prose prose-gray max-w-none text-justify
               prose-headings:text-black prose-headings:font-bold
               prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4
               prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-3
-              prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-4
+              prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-4 prose-p:text-justify
               prose-ul:text-gray-700 prose-ul:my-4
-              prose-li:mb-2
+              prose-li:mb-2 prose-li:text-justify
+              prose-td:text-justify
               prose-strong:text-black prose-strong:font-semibold"
             dangerouslySetInnerHTML={{ __html: newsItem.content }}
           />

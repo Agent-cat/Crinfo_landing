@@ -20,25 +20,25 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <nav className="max-w-7xl mx-auto pr-4 sm:pl-5 sm:pr-6 lg:pr-8">
+    <header className="sticky top-0 z-50 text-white bg-blue-600 border-b border-gray-200">
+      <nav className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="shrink-0">
             <Link
               href="/"
               className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300"
             >
-              <span className="text-black text-xl md:text-2xl font-bold hover:text-blue-600 transition-colors duration-300">
-                Crinfo Global
-              </span>
               <Image
                 src="/crinfo_logo.png"
                 alt="Crinfo Global"
                 width={120}
-                height={40}
-                className="h-10 w-auto"
+                height={50}
+                className="h-20 rounded-full w-auto"
                 priority
               />
+              <span className="text-white text-xl md:text-3xl font-bold hover:text-blue-600 transition-colors duration-300">
+                Crinfo Global
+              </span>
             </Link>
           </div>
 
@@ -47,7 +47,7 @@ const Navbar = () => {
               <div key={index} className="relative group">
                 {item.subMenu ? (
                   <>
-                    <button className="relative  px-3 py-2 text-black text-md font-medium flex items-center gap-1">
+                    <button className="relative text-[20px] font-bold px-3 py-2 text-white text-md  flex items-center gap-1">
                       <span className="relative z-10">{item.name}</span>
                       <svg
                         className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
@@ -87,7 +87,7 @@ const Navbar = () => {
                           <Link
                             key={subIndex}
                             href={subItem.href}
-                            className="block px-4 py-3 text-sm text-black hover:text-blue-600 hover:bg-gray-50 transition-all duration-300 relative group/sub"
+                            className="block  px-4 py-3 text-sm text-black hover:text-blue-600 hover:bg-gray-50 transition-all duration-300 relative group/sub"
                           >
                             <span className="relative z-10">
                               {subItem.name}
@@ -101,7 +101,7 @@ const Navbar = () => {
                 ) : (
                   <Link
                     href={item.href}
-                    className="relative px-3 py-2 text-black text-sm font-medium group"
+                    className="relative px-3 py-2 text-white text-[20px] font-bold group"
                   >
                     <span className="relative z-10">{item.name}</span>
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 ease-out group-hover:w-full"></span>
@@ -154,9 +154,8 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
-          }`}
+          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+            }`}
         >
           <div className="px-2 pt-2 pb-3 space-y-1 border-t border-gray-200">
             {NavConstants.map((item, index) => (
@@ -169,9 +168,8 @@ const Navbar = () => {
                     >
                       <span className="relative z-10">{item.name}</span>
                       <svg
-                        className={`w-5 h-5 transition-transform duration-300 ${
-                          openMobileSubmenu === index ? "rotate-180" : ""
-                        }`}
+                        className={`w-5 h-5 transition-transform duration-300 ${openMobileSubmenu === index ? "rotate-180" : ""
+                          }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -187,11 +185,10 @@ const Navbar = () => {
                     </button>
 
                     <div
-                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                        openMobileSubmenu === index
-                          ? "max-h-96 opacity-100"
-                          : "max-h-0 opacity-0"
-                      }`}
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${openMobileSubmenu === index
+                        ? "max-h-96 opacity-100"
+                        : "max-h-0 opacity-0"
+                        }`}
                     >
                       <div className="pl-4 space-y-1 mt-1">
                         {item.subMenu.map((subItem, subIndex) => (

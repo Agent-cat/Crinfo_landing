@@ -1,28 +1,29 @@
-const BooksConstants = [{
-    id: 2,
-    categories: ["LITERATURE", "EUROPEAN STUDIES", "HISTORY"],
-    title: "XOUTH, THE APE: A TALE OF MANNERS",
-    authors: ["Iakovos Pitsipios", "Neo G. Christodoulides"],
-    description:
-      "'Xouth, the Ape', published in 1848 by Iakovos Pitsipios is a pioneering and satirical Greek novel that deftly blends humour, cultural critique, and biting social commentary. The novel is set in the aftermath of the Greek War of Independence. The story follows a young Greek man, desperate to present himself as a European aristocrat, who finds himself entangled with Xouth—an ape who is, in fact, a German travel writer transformed as punishment for his vanity and prejudices.",
-    image: "/books/book2.jpg",
+const BooksConstants = [
+  {
+    id: 1766123848826,
+    categories: ["ACADEMIC RESEARCH"],
+    title: "PROCEEDINGS ON KLEF INTERNATIONAL CONFERENCE ON EMERGING ELECTRONICS AND SUSTAINABILITY - ICESS 2025 ",
+    authors: ["Dr. V. Vivekananthan"],
+    description: `PROCEEDINGS ON KLEF INTERNATIONAL CONFERENCE ON EMERGING ELECTRONICS AND SUSTAINABILITY (ICESS 2025) presents a comprehensive collection of peer-reviewed research papers showcased at the ICESS 2025 conference. This volume highlights recent advancements, innovative methodologies, and interdisciplinary research in the fields of emerging electronics and sustainable technologies.
+
+The proceedings cover a wide range of topics including next-generation electronic systems, sustainable engineering solutions, renewable energy integration, smart devices, embedded systems, Internet of Things (IoT), green technologies, and environmentally responsible design practices. Each contribution reflects rigorous academic standards and provides valuable insights into both theoretical foundations and practical applications.
+
+Edited by Dr. V. Vivekananthan, this volume serves as an essential reference for researchers, academicians, industry professionals, and postgraduate students seeking to stay informed about current trends and future directions in electronics and sustainability. The book aims to foster knowledge exchange, encourage innovation, and support sustainable development through advanced technological research.
+
+Published in English, this proceedings volume contributes meaningfully to the global research community by documenting impactful work presented at the KLEF International Conference on Emerging Electronics and Sustainability (ICESS 2025).`,
+    image: "/books/1766123766366-photo_6208530051809086411_y.jpg",
   },
   {
-    id: 3,
-    categories: ["THEATRE", "MUSIC"],
-    title: "PERFORMANCE RESEARCH METHODS: INTERDISCIPLINARY METHODS FOR THEATRE, DANCE AND PERFORMANCE STUDIES",
-    authors: ["Various Authors"],
-    description:
-      "An interdisciplinary exploration of research methods in performance studies, covering theatre, dance, and performance art. This comprehensive guide provides scholars and practitioners with essential methodological frameworks for conducting rigorous research in the performing arts.",
-    image: "/books/book3.jpg",
-  },
-  {
-    id: 1762311920829,
-    categories: ["Id enim fuga Commo"],
-    title: "Cum repellendus Ips",
-    authors: ["Et dolor dolor rerum"],
-    description: "Sint sit dolore comm",
-    image: "/books/1762311907906-logo18.png",
+    id: 1766124140721,
+    categories: ["ACADEMIC-WEB PROGRAMMING"],
+    title: "The Basics of Web Application Development ",
+    authors: ["Mythrayee D", "Nidhya R", "Dinesh Kumar Anguraj", "Deepak V"],
+    description: `The Basics of Web Application Development is a comprehensive introductory guide designed to provide a strong foundation in modern web application development concepts and practices. Written in clear and accessible language, this book bridges the gap between theoretical understanding and practical implementation for beginners and aspiring developers.
+
+The book covers essential topics such as web architecture, front-end and back-end development, client–server communication, databases, and deployment fundamentals. It introduces commonly used technologies, frameworks, and tools while emphasizing best practices in design, development, and security. Through structured explanations and real-world examples, readers gain a practical understanding of how scalable and interactive web applications are built.
+
+Authored by Mythrayee D, Nidhya R, Dinesh Kumar Anguraj, and Deepak V, this book is well-suited for undergraduate students, educators, and self-learners seeking a systematic approach to learning web development. Published in English, it serves as a valuable academic resource and a stepping stone toward advanced web technologies.`,
+    image: "/books/1766124091510-web.jpg",
   },
 ];
 

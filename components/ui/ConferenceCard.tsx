@@ -8,13 +8,13 @@ const ConferenceCard = () => {
       <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
         {/* Logo Section */}
         <div className="shrink-0">
-          <div className="w-24 h-24 bg-gray-100 rounded-lg flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-blue-600 mb-1">
-                AICSEB
-              </div>
-              <div className="text-xs text-gray-600">2026</div>
-            </div>
+          <div className="relative w-32 h-32 md:w-40 md:h-40 bg-gray-100 rounded-lg overflow-hidden border border-gray-200">
+            <Image
+              src="/conferences/aicseb_2026.png"
+              alt="AICSEB 2026 logo"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
 
