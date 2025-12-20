@@ -62,7 +62,7 @@ const HomePage = () => {
                 className="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:bg-gray-100 hover:border-blue-600 transition-all duration-300 group"
               >
                 <div className="flex items-start gap-3 mb-3">
-                  <Calendar className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                  <Calendar className="w-5 h-5 text-blue-600 shrink-0 mt-1" />
                   <span className="text-sm text-gray-600">{news.date}</span>
                 </div>
                 <h3 className="text-xl font-bold text-black group-hover:text-blue-600 transition-colors line-clamp-2 mb-3 text-justify">
