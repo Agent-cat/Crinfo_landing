@@ -36,13 +36,13 @@ const Navbar = () => {
                 className="h-20 rounded-full w-auto"
                 priority
               />
-              <span className="text-white text-xl md:text-3xl font-bold hover:text-blue-600 transition-colors duration-300">
+              <span className="text-white text-xl md:text-3xl font-bold  transition-colors duration-300">
                 Crinfo Global
               </span>
             </Link>
           </div>
 
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden 2xl:flex items-center gap-3">
             {NavConstants.map((item, index) => (
               <div key={index} className="relative group">
                 {item.subMenu ? (
@@ -114,7 +114,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          <div className="lg:hidden">
+          <div className="2xl:hidden">
             <button
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-blue-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600 transition-colors duration-300"
@@ -154,7 +154,7 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+          className={`2xl:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
             }`}
         >
           <div className="px-2 pt-2 pb-3 space-y-1 border-t border-gray-200">

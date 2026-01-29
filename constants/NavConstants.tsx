@@ -4,8 +4,8 @@ const NavConstants = [
     href: "/",
   },
   {
-    name: "Acadamic Journals",
-    href: "/acadamic-journals",
+    name: "Academic Journals",
+    href: "/academic-journals",
   },
   {
     name: "Books",

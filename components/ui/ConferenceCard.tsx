@@ -21,7 +21,8 @@ const ConferenceCard = () => {
         {/* Content Section */}
         <div className="flex-1 text-center md:text-left">
           <h3 className="text-xl md:text-2xl font-bold text-black mb-3">
-            AICSEB 2026 - 1st IEEE International Conference
+            ICSEB 2026 - 1st IEEE International Conference on Intelligent
+            Computing, Smart Electronics and Bioinformatics - 2026
           </h3>
 
           <p className="text-gray-600 leading-relaxed mb-4">
@@ -47,7 +48,7 @@ const ConferenceCard = () => {
           </div>
 
           <Link
-            href="https://aicseb.crinfoglobal.com/"
+            href="https://icseb.crinfoglobal.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 group"
