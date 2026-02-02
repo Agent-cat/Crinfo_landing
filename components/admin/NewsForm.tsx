@@ -1,21 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import { addNews } from "@/app/actions/crud";
+import { addNews, updateNews } from "@/app/actions/crud";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 
-export default function NewsForm({ onSuccess }: { onSuccess: () => void }) {
+export default function NewsForm({ onSuccess, editData }: { onSuccess: () => void, editData?: any }) {
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    title: "",
-    date: new Date().toLocaleDateString("en-US", {
+    title: editData?.title || "",
+    date: editData?.date || new Date().toLocaleDateString("en-US", {
       day: "numeric",
       month: "long",
       year: "numeric",
     }),
-    excerpt: "",
-    content: "",
+    excerpt: editData?.excerpt || "",
+    content: editData?.content || "",
   });
 
   const updateField = (field: string, value: string) => {
@@ -30,10 +30,14 @@ export default function NewsForm({ onSuccess }: { onSuccess: () => void }) {
         data.append(key, value);
       });
 
-      await addNews(data);
+      if (editData) {
+        await updateNews(editData.id, data);
+      } else {
+        await addNews(data);
+      }
       onSuccess();
     } catch (error) {
-      alert("Error adding news");
+      alert("Error saving news");
     } finally {
       setLoading(false);
     }
@@ -166,7 +170,7 @@ export default function NewsForm({ onSuccess }: { onSuccess: () => void }) {
             disabled={loading}
             className="flex items-center gap-2 px-6 py-3 bg-[#800020] text-amber-50 rounded-lg hover:bg-[#600018] transition-colors ml-auto disabled:opacity-50"
           >
-            {loading ? "Publishing..." : "Publish News"}
+            {loading ? (editData ? "Updating..." : "Publishing...") : (editData ? "Update News" : "Publish News")}
           </button>
         )}
       </div>

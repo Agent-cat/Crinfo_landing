@@ -205,12 +205,20 @@ const AdminDashboard = () => {
                   </h3>
                   <p className="text-amber-50/60 text-sm">{news.date}</p>
                 </div>
-                <button
-                  onClick={() => handleDeleteRequest("news", news.id)}
-                  className="p-2 text-red-500 hover:bg-red-500/10 rounded transition-colors"
-                >
-                  <Trash2 className="w-5 h-5" />
-                </button>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => handleEdit("news", news)}
+                    className="p-2 text-blue-500 hover:bg-blue-500/10 rounded transition-colors"
+                  >
+                    <Edit className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={() => handleDeleteRequest("news", news.id)}
+                    className="p-2 text-red-500 hover:bg-red-500/10 rounded transition-colors"
+                  >
+                    <Trash2 className="w-5 h-5" />
+                  </button>
+                </div>
               </div>
             ))}
         </div>
@@ -237,7 +245,7 @@ const AdminDashboard = () => {
             <div className="p-6">
               {showModal === "journal" && <JournalForm onSuccess={handleSuccess} editData={editingItem} />}
               {showModal === "book" && <BookForm onSuccess={handleSuccess} editData={editingItem} />}
-              {showModal === "news" && <NewsForm onSuccess={handleSuccess} />}
+              {showModal === "news" && <NewsForm onSuccess={handleSuccess} editData={editingItem} />}
             </div>
           </div>
         </div>
