@@ -33,10 +33,7 @@ const NavConstants = [
       },
     ],
   },
-  {
-    name: "News & Announcements",
-    href: "/news-announcements",
-  },
+
   {
     name: "About",
     href: "/about",
